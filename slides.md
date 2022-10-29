@@ -98,7 +98,7 @@ const NumItem = returnWhatIpassIn(3) // number
 
 ## Example with nodejs pg
 
-PG has a type called QueryResult, which normally returns any,
+PG has a type called QueryResult, which by default returns any,
 That any means we don't get to use typescript features.
 ![query_any](/images/query_any.png)
 
@@ -106,10 +106,41 @@ That any means we don't get to use typescript features.
 
 ## Example with nodejs pg
 
-we can fix this and get typescript features by giving it a type.
+However it is a generic that accepts types, meaning we can fix this and get typescript features by giving it a type.
 <br>
 ![query_type](/images/query_type.png)
 <br>
 and we get autocomplete and type checking, the features of ts that we love.
 <br>
 ![auto](/images/auto2.png)
+
+---
+
+## Example with nodejs pg
+
+Say we want to return one row, instead of writing: 
+```ts 
+function show(id: string): Promise<QueryResult<Product>['rows'][0]> {
+    const result = await query('SELECT * products WHERE id = $1;', [id])
+    return result.rows[0]
+}
+```
+_As you can see we get typescript typechecking, now that the result might be undefined if not found_
+<img src='/images/auto.png' width=650 />
+
+--- 
+
+## Example with nodejs pg
+and having to write `Promise<QueryResult<Product>['rows'][0]>` every time, we can use a generic:
+
+```ts
+export type queryReturnRow<Type> = Promise<QueryResult<Type>['rows'][0]>
+export type ProductRow = queryReturnRow<Product>
+export type UserRow = queryReturnRow<User>
+
+function show(id: string): ProductRow {
+    const result = await query('SELECT * products WHERE id = $1;', [id])
+    return result.rows[0]
+}
+```
+
