@@ -82,11 +82,8 @@ const StringItem = returnWhatIpassIn('string') // string
 const NumItem = returnWhatIpassIn(3) // error
 ```
 
-<br>
-
-## Using generics
-
-```ts {0|all|1|all}
+Using generics
+```ts {0|all|1|all|0}
 function returnWhatIpassIn<TItem>(item: TItem): TItem {
   return item
 }
