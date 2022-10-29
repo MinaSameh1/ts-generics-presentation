@@ -44,7 +44,7 @@ theme: seriph
 # Teamwork
 
 <h2>Mina Sameh Wadie</h2>
-<h2>Ahmed Hamdy</h2>
+<h2>Ahmed Hamdy Mohammed</h2>
 <h2>Ahmed Hamdy Ameen</h2>
 
 ---
