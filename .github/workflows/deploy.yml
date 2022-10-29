@@ -12,6 +12,8 @@ jobs:
         run: npm install
       - name: Install slidev
         run:  npm i -g @slidev/cli
+      - name: install playwright required for slidev
+        run: npm i -g playwright-chromium
       - name: Build
         run: slidev build --base ts-generics-presentation
       - name: Deploy pages
