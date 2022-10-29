@@ -94,7 +94,7 @@ const StringItem = returnWhatIpassIn('string') // string
 const NumItem = returnWhatIpassIn(3) // number
 ```
 Arrays
-```ts
+```ts {0|all|1|all}
 function returnWhatIPassInArray<TItem>(item: TItem[]): TItem[] {
   return item
 }
