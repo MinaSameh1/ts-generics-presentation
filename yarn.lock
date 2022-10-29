@@ -2893,6 +2893,18 @@ plantuml-encoder@^1.4.0:
   resolved "https://registry.yarnpkg.com/plantuml-encoder/-/plantuml-encoder-1.4.0.tgz#7899302cf785de956bf1a167e15420feee5975f7"
   integrity sha512-sxMwpDw/ySY1WB2CE3+IdMuEcWibJ72DDOsXLkSmEaSzwEUaYBT6DWgOfBiHGCux4q433X6+OEFWjlVqp7gL6g==
 
+playwright-chromium@^1.27.1:
+  version "1.27.1"
+  resolved "https://registry.yarnpkg.com/playwright-chromium/-/playwright-chromium-1.27.1.tgz#648e521a8f91aa2f4f34de47120031709985a13d"
+  integrity sha512-AXAfmNHVnqByo7dKLwLqEC3aKIUlATwDUHCBwVw/qyRCgGUEoufeFUxFXB7pJ4nppwThph7TFe3fHfoETPqSvg==
+  dependencies:
+    playwright-core "1.27.1"
+
+playwright-core@1.27.1:
+  version "1.27.1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.27.1.tgz#840ef662e55a3ed759d8b5d3d00a5f885a7184f4"
+  integrity sha512-9EmeXDncC2Pmp/z+teoVYlvmPWUC6ejSSYZUln7YaP89Z6lpAaiaAnqroUt/BoLo8tn7WYShcfaCh+xofZa44Q==
+
 popmotion@^11.0.5:
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-11.0.5.tgz#8e3e014421a0ffa30ecd722564fd2558954e1f7d"
@@ -3145,16 +3157,6 @@ slash@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-4.0.0.tgz#2422372176c4c6c5addb5e2ada885af984b396a7"
   integrity sha512-3dOsAHXXUkQTpOYcoAxLIorMTp4gIQr5IW3iVb7A7lFIp0VHhnynm9izx6TssdrIcVIESAlVjtnO2K8bg+Coew==
-
-slidev-theme-takahashi@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/slidev-theme-takahashi/-/slidev-theme-takahashi-1.0.0.tgz#01048d6337847899944a40a287afa29f174a27d1"
-  integrity sha512-4RNK8DFXzwberwGN5LVlR/AxhpKKA6+c+78kwPU0+gCM68KcDUw2lCAb6VOLIohXLCp7USm8tAzmU7I6Lhf+ig==
-  dependencies:
-    "@slidev/types" "^0.22.7"
-    codemirror-theme-vars "^0.1.1"
-    prism-theme-vars "^0.2.2"
-    theme-vitesse "^0.1.12"
 
 source-map-js@^1.0.1, source-map-js@^1.0.2:
   version "1.0.2"
