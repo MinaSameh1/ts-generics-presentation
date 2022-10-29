@@ -84,7 +84,7 @@ const NumItem = returnWhatIpassIn(3) // error
 
 <br>
 
-### Using generics
+## Using generics
 
 ```ts {0|all|1|all}
 function returnWhatIpassIn<TItem>(item: TItem): TItem {
@@ -93,7 +93,15 @@ function returnWhatIpassIn<TItem>(item: TItem): TItem {
 const StringItem = returnWhatIpassIn('string') // string
 const NumItem = returnWhatIpassIn(3) // number
 ```
-
+Arrays
+```ts
+function returnWhatIPassInArray<TItem>(item: TItem[]): TItem[] {
+  return item
+}
+const StringItem = returnWhatIPassInArray(['string']) // Array<string>
+const NumItem = returnWhatIPassInArray([3]) // Array<number>
+const Item = returnWhatIPassInArray(1) // Error
+```
 ---
 
 ## Example with nodejs pg
@@ -120,18 +128,21 @@ and we get autocomplete and type checking, the features of ts that we love.
 
 Say we want to return one row, instead of writing: 
 ```ts 
+import { QueryResult } from 'pg'
+import { Product } from './types'
+
 function show(id: string): Promise<QueryResult<Product>['rows'][0]> {
     const result = await query('SELECT * products WHERE id = $1;', [id])
     return result.rows[0]
 }
 ```
-_As you can see we get typescript typechecking, note that the result might be undefined if not found_
+_As you can see we get typescript type checking, note that the result might be undefined if not found_
 <img src='/images/auto.png' width=650 />
 
 --- 
 
 ## Example with nodejs pg
-and having to write `Promise<QueryResult<Product>['rows'][0]>` every time, we can use a generic:
+Instead of having to write `Promise<QueryResult<Product>['rows'][0]>` every time, we can use a generic:
 
 ```ts
 export type queryReturnRow<Type> = Promise<QueryResult<Type>['rows'][0]>
