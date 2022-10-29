@@ -145,13 +145,13 @@ _As you can see we get typescript type checking, note that the result might be u
 Instead of having to write `Promise<QueryResult<Product>['rows'][0]>` every time, we can use a generic:
 
 ```ts
-export type queryReturnRow<Type> = Promise<QueryResult<Type>['rows'][0]>
-export type ProductRow = queryReturnRow<Product>
-export type UserRow = queryReturnRow<User> // Reuseability.
+export type queryReturnRow<Type> = Promise<QueryResult<Type>['rows'][0] | undefined>;
+export type ProductRow = queryReturnRow<Product>;
+export type UserRow = queryReturnRow<User>; // Reuseability.
 
 function show(id: string): ProductRow {
-    const result = await query('SELECT * products WHERE id = $1;', [id])
-    return result.rows[0]
+    const result = await query('SELECT * products WHERE id = $1;', [id]);
+    return result.rows[0];
 }
 ```
 
