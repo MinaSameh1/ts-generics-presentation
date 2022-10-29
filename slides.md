@@ -3,7 +3,7 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: public/images/typescript.png
+background: /images/typescript.png
 # apply any windi css classes to the current slide
 class: 'text-center'
 # https://sli.dev/custom/highlighters.html
@@ -12,6 +12,7 @@ highlighter: shiki
 lineNumbers: false
 # some information about the slides, markdown enabled
 info: Slides for typescript generics.
+download: true
 # persist drawings in exports and build
 drawings:
   persist: false
@@ -36,7 +37,7 @@ The last comment block of each slide will be treated as slide notes. It will be 
 layout: cover
 class: 'text-center'
 highlighter: shiki
-background: public/images/cov.png
+background: /images/cov.png
 theme: seriph
 ---
 
