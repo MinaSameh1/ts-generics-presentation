@@ -43,7 +43,7 @@ theme: seriph
 
 # Teamwork
 
-<h2>Mina Sameh</h2>
+<h2>Mina Sameh Wadie</h2>
 <h2>Ahmed Hamdy</h2>
 <h2>Ahmed Hamdy Ameen</h2>
 
@@ -83,13 +83,16 @@ const NumItem = returnWhatIpassIn(3) // error
 ```
 
 Using generics
-```ts {0|all|1|all|0}
+```ts {0|all|1|all}
 function returnWhatIpassIn<TItem>(item: TItem): TItem {
   return item
 }
 const StringItem = returnWhatIpassIn('string') // string
 const NumItem = returnWhatIpassIn(3) // number
 ```
+
+---
+
 Arrays
 ```ts {0|all|1|all}
 function returnWhatIPassInArray<TItem>(item: TItem[]): TItem[] {
