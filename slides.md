@@ -23,7 +23,7 @@ css: unocss
 # Generics
 
 <div class="abs-br m-6 flex gap-2">
-  <a href="https://github.com/MinaSameh1" target="_blank" alt="GitHub"
+  <a href="https://github.com/MinaSameh1/ts-generics-presentation" target="_blank" alt="GitHub"
     class="text-xl icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -125,7 +125,7 @@ function show(id: string): Promise<QueryResult<Product>['rows'][0]> {
     return result.rows[0]
 }
 ```
-_As you can see we get typescript typechecking, now that the result might be undefined if not found_
+_As you can see we get typescript typechecking, note that the result might be undefined if not found_
 <img src='/images/auto.png' width=650 />
 
 --- 
