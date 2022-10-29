@@ -12,8 +12,6 @@ jobs:
         run: yarn install
       - name: Install slidev
         run:  yarn global add @slidev/cli
-      - name: Playwright for slidev
-        run: yarn global add playwright-chromium
       - name: Build
         run: slidev build --base ts-generics-presentation
       - name: Deploy pages
